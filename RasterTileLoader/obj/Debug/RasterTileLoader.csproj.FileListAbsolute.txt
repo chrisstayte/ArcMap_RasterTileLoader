@@ -5,5 +5,4 @@ C:\Users\chris\Desktop\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoa
 C:\Users\chris\Desktop\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.csproj.GenerateResource.Cache
 C:\Users\chris\Desktop\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.dll
 C:\Users\chris\Desktop\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.pdb
-C:\Users\chris\Desktop\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.csprojResolveAssemblyReference.cache
 C:\Users\chris\Desktop\RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.esriAddIn

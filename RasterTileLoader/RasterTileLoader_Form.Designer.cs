@@ -35,7 +35,6 @@
             this.txbRasterWorkspace = new System.Windows.Forms.TextBox();
             this.btnInit = new System.Windows.Forms.Button();
             this.btnLoadRaster = new System.Windows.Forms.Button();
-            this.txbExtension = new System.Windows.Forms.TextBox();
             this.rbtnAll = new System.Windows.Forms.RadioButton();
             this.rbtnSelected = new System.Windows.Forms.RadioButton();
             this.lblTileIndex = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.lblRasterWorkspace = new System.Windows.Forms.Label();
             this.lblLoadingRasterMethod = new System.Windows.Forms.Label();
             this.btnSelectWorkspace = new System.Windows.Forms.Button();
+            this.cboExtension = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // cboTileIndex
@@ -91,7 +91,7 @@
             // 
             // btnInit
             // 
-            this.btnInit.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInit.Location = new System.Drawing.Point(12, 12);
             this.btnInit.Name = "btnInit";
             this.btnInit.Size = new System.Drawing.Size(75, 23);
@@ -110,13 +110,6 @@
             this.btnLoadRaster.Text = "LoadRaster";
             this.btnLoadRaster.UseVisualStyleBackColor = true;
             this.btnLoadRaster.Click += new System.EventHandler(this.btnLoadRaster_Click);
-            // 
-            // txbExtension
-            // 
-            this.txbExtension.Location = new System.Drawing.Point(224, 128);
-            this.txbExtension.Name = "txbExtension";
-            this.txbExtension.Size = new System.Drawing.Size(100, 22);
-            this.txbExtension.TabIndex = 8;
             // 
             // rbtnAll
             // 
@@ -209,7 +202,7 @@
             this.lblLoadingRasterMethod.Name = "lblLoadingRasterMethod";
             this.lblLoadingRasterMethod.Size = new System.Drawing.Size(126, 13);
             this.lblLoadingRasterMethod.TabIndex = 17;
-            this.lblLoadingRasterMethod.Text = "Loading Raster Method";
+            this.lblLoadingRasterMethod.Text = "Raster Loading Method";
             // 
             // btnSelectWorkspace
             // 
@@ -222,6 +215,15 @@
             this.btnSelectWorkspace.UseVisualStyleBackColor = true;
             this.btnSelectWorkspace.Click += new System.EventHandler(this.btnSelectWorkspace_Click);
             // 
+            // cboExtension
+            // 
+            this.cboExtension.FormattingEnabled = true;
+            this.cboExtension.Location = new System.Drawing.Point(225, 128);
+            this.cboExtension.Name = "cboExtension";
+            this.cboExtension.Size = new System.Drawing.Size(99, 21);
+            this.cboExtension.TabIndex = 19;
+            this.cboExtension.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboExtension_KeyPress);
+            // 
             // RasterTileLoader_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,6 +231,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(335, 265);
             this.ControlBox = false;
+            this.Controls.Add(this.cboExtension);
             this.Controls.Add(this.btnSelectWorkspace);
             this.Controls.Add(this.lblLoadingRasterMethod);
             this.Controls.Add(this.lblRasterWorkspace);
@@ -239,7 +242,6 @@
             this.Controls.Add(this.lblTileIndex);
             this.Controls.Add(this.rbtnSelected);
             this.Controls.Add(this.rbtnAll);
-            this.Controls.Add(this.txbExtension);
             this.Controls.Add(this.btnLoadRaster);
             this.Controls.Add(this.btnInit);
             this.Controls.Add(this.txbRasterWorkspace);
@@ -252,7 +254,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RasterTileLoader_Form";
-            this.Text = "RasterTileLoader_Form";
+            this.Text = "Raster Tile Loader";
             this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -268,7 +270,6 @@
         private System.Windows.Forms.TextBox txbRasterWorkspace;
         private System.Windows.Forms.Button btnInit;
         private System.Windows.Forms.Button btnLoadRaster;
-        private System.Windows.Forms.TextBox txbExtension;
         private System.Windows.Forms.RadioButton rbtnAll;
         private System.Windows.Forms.RadioButton rbtnSelected;
         private System.Windows.Forms.Label lblTileIndex;
@@ -279,5 +280,6 @@
         private System.Windows.Forms.Label lblRasterWorkspace;
         private System.Windows.Forms.Label lblLoadingRasterMethod;
         private System.Windows.Forms.Button btnSelectWorkspace;
+        private System.Windows.Forms.ComboBox cboExtension;
     }
 }

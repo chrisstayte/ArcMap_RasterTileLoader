@@ -15,6 +15,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace RasterTileLoader
 {
@@ -31,6 +32,11 @@ namespace RasterTileLoader
         private Utilities _utilities;
         private IDictionary<String, Boolean> rasterList = new Dictionary<String, Boolean>();
 
+        private string appDataFolder = String.Empty;
+        private string saveFolder = String.Empty;
+        private string saveFile = "history_filetype";
+        private List<String> fileTypeHistory = new List<String>();
+
         #endregion
 
         #region Constructor
@@ -39,6 +45,9 @@ namespace RasterTileLoader
         {
             _application = application;
             InitializeComponent();
+
+            appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            saveFolder = System.IO.Path.Combine(appDataFolder, "RasterTileLoader");
         }
 
         public static RasterTileLoader_Form instance
@@ -102,6 +111,11 @@ namespace RasterTileLoader
                  this.txbRasterWorkspace.Text = fbd.SelectedPath;
         }
 
+        private void cboExtension_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ') e.Handled = true;
+        }
+
         #endregion
 
         #region Methods
@@ -111,6 +125,8 @@ namespace RasterTileLoader
             _mxdocument = (IMxDocument)_application.Document;
             _map = _mxdocument.FocusMap;
             _utilities = new Utilities(_map);
+
+            loadFileTypeList();
 
             cboTileIndex.Items.AddRange(_utilities.PolygonLayers().ToArray());
             if (cboTileIndex.Items.Count > 0)
@@ -243,17 +259,20 @@ namespace RasterTileLoader
 
         private void LoadRasterList()
         {
+            bool itWorked = false;
             foreach (KeyValuePair<String, Boolean> raster in rasterList)
             {
                 if (raster.Value == true)
                 {
+                    if (!itWorked)
+                        saveFileTypeList(cboExtension.Text);
+                    itWorked = true;
+
                     string filePath = txbRasterWorkspace.Text + "\\" + addPrefixAndSuffixToFileName(raster.Key) + getExtension();
                     IRasterLayer rasterLayer = new RasterLayer();
                     rasterLayer.CreateFromFilePath(filePath);
                     _mxdocument.AddLayer(rasterLayer);
                 }
-                
-
             }
         }
 
@@ -261,9 +280,9 @@ namespace RasterTileLoader
         {
             string extension = String.Empty;
 
-            if (txbExtension.Text != String.Empty)
+            if (cboExtension.Text != String.Empty)
             {
-                extension = txbExtension.Text;
+                extension = cboExtension.Text;
                 if (extension.Contains("."))
                     extension = extension.Replace(".", "");
                 return "." + extension;
@@ -298,6 +317,48 @@ namespace RasterTileLoader
         {
             MessageBox.Show(errorMessage, MB_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void loadFileTypeList()
+        {
+            cboExtension.Items.Clear();
+            fileTypeHistory.Clear();
+
+            if (!Directory.Exists(saveFolder))
+                Directory.CreateDirectory(saveFolder);
+
+            if (File.Exists(saveFolder + "\\" + saveFile))
+            {
+                using (StreamReader sStreamReader = new StreamReader(saveFolder + "\\" + saveFile))
+                {
+                    string AllData = sStreamReader.ReadToEnd();
+                    fileTypeHistory.AddRange(AllData.Split(",".ToCharArray()));
+                    cboExtension.Items.AddRange(fileTypeHistory.ToArray());
+                }
+                
+            }
+        }
+
+        private void saveFileTypeList(string type) 
+        {
+            if (!fileTypeHistory.Contains(type, StringComparer.OrdinalIgnoreCase) && !String.IsNullOrEmpty(type))
+            {
+                fileTypeHistory.Add(type);
+            }
+            using (TextWriter tw = new StreamWriter(saveFolder + "\\" + saveFile))
+            {
+                tw.Write(String.Join(",", fileTypeHistory));
+            }
+        }
         #endregion
+
+        #region Extension
+
+        
+
+        #endregion
+
+
     }
 }
+
+
