@@ -97,7 +97,7 @@
             this.btnInit.Name = "btnInit";
             this.btnInit.Size = new System.Drawing.Size(75, 23);
             this.btnInit.TabIndex = 6;
-            this.btnInit.Text = "initialize";
+            this.btnInit.Text = "Initialize";
             this.btnInit.UseVisualStyleBackColor = true;
             this.btnInit.Click += new System.EventHandler(this.btnInit_Click);
             // 

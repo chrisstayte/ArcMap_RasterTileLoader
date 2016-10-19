@@ -272,6 +272,7 @@ namespace RasterTileLoader
                     }
                     catch (Exception ex)
                     {
+                        
                         // Just So ArcMap doesn't crash ;) 
                     }
                     

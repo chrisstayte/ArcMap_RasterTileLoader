@@ -8,6 +8,7 @@ C:\Users\chris\Desktop\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoa
 C:\Users\chris\Desktop\RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.esriAddIn
 C:\Users\chris\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.dll
 C:\Users\chris\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.pdb
+C:\Users\chris\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.csprojResolveAssemblyReference.cache
 C:\Users\chris\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.Properties.Resources.resources
 C:\Users\chris\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.RasterTileLoader_Form.resources
 C:\Users\chris\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.csproj.GenerateResource.Cache
