@@ -1,7 +1,7 @@
 ﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>RasterTileLoader</Name>
   <AddInID>{28b91f29-991b-4c15-af27-fb0772ad58c8}</AddInID>
-  <Description>Adds Rasters To TOC base on Tile Index</Description>
+  <Description>Adds Rasters To Table of Contents based on Tile Index</Description>
   <Version>1.0</Version>
   <Image>Images\RasterTileLoader_1.png</Image>
   <Author>Chris Stayte</Author>
@@ -13,7 +13,7 @@
   <AddIn language="CLR" library="RasterTileLoader.dll" namespace="RasterTileLoader">
     <ArcMap>
       <Commands>
-        <Button id="Woolpert_Inc_RasterTileLoader_RasterTileLoader" class="RasterTileLoader" message="Loads Raster Files based on Tile Index. Index Field must match raster file schema." caption="Raster Tile Loader" tip="Loads Raster Base On Tile Index" category="Woolpert" image="Images\RasterTileLoader.png" />
+        <Button id="Woolpert_Inc_RasterTileLoader_RasterTileLoader" class="RasterTileLoader" message="Loads Raster Files based on Tile Index. Index Field must match raster file schema." caption="Raster Tile Loader" tip="Loads Raster Based On Tile Index" category="Woolpert" image="Images\RasterTileLoader.png" />
       </Commands>
     </ArcMap>
   </AddIn>
