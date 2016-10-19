@@ -46,6 +46,7 @@
             this.lblLoadingRasterMethod = new System.Windows.Forms.Label();
             this.btnSelectWorkspace = new System.Windows.Forms.Button();
             this.cboExtension = new System.Windows.Forms.ComboBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cboTileIndex
@@ -96,7 +97,7 @@
             this.btnInit.Name = "btnInit";
             this.btnInit.Size = new System.Drawing.Size(75, 23);
             this.btnInit.TabIndex = 6;
-            this.btnInit.Text = "Initialize";
+            this.btnInit.Text = "initialize";
             this.btnInit.UseVisualStyleBackColor = true;
             this.btnInit.Click += new System.EventHandler(this.btnInit_Click);
             // 
@@ -224,6 +225,17 @@
             this.cboExtension.TabIndex = 19;
             this.cboExtension.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboExtension_KeyPress);
             // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(249, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 20;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // RasterTileLoader_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +243,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(335, 265);
             this.ControlBox = false;
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cboExtension);
             this.Controls.Add(this.btnSelectWorkspace);
             this.Controls.Add(this.lblLoadingRasterMethod);
@@ -281,5 +294,6 @@
         private System.Windows.Forms.Label lblLoadingRasterMethod;
         private System.Windows.Forms.Button btnSelectWorkspace;
         private System.Windows.Forms.ComboBox cboExtension;
+        private System.Windows.Forms.Button btnClose;
     }
 }

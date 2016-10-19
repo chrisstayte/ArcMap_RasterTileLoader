@@ -1,19 +1,10 @@
 ﻿using ESRI.ArcGIS.ArcMapUI;
 using ESRI.ArcGIS.Carto;
-using ESRI.ArcGIS.Display;
-using ESRI.ArcGIS.Editor;
-using ESRI.ArcGIS.esriSystem;
 using ESRI.ArcGIS.Framework;
 using ESRI.ArcGIS.Geodatabase;
-using ESRI.ArcGIS.Geometry;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 using System.Linq;
 
@@ -72,17 +63,17 @@ namespace RasterTileLoader
 
         private void btnInit_Click(object sender, EventArgs e)
         {
-            Initialize();
+            initialize();
         }
 
         private void btnLoadRaster_Click(object sender, EventArgs e)
         {
 
-            if (CheckRequirements())
+            if (checkRequirements())
             {
-                GenerateRasterList();
-                ValidateRasterList();
-                LoadRasterList();
+                generateRasterList();
+                validateRasterList();
+                loadRasterList();
             }
             
             //IRasterLayer rasterLayer = new RasterLayer();
@@ -116,11 +107,15 @@ namespace RasterTileLoader
             if (e.KeyChar == ' ') e.Handled = true;
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
         #endregion
 
         #region Methods
 
-        private void Initialize()
+        private void initialize()
         {
             _mxdocument = (IMxDocument)_application.Document;
             _map = _mxdocument.FocusMap;
@@ -139,11 +134,11 @@ namespace RasterTileLoader
             }
         }
 
-        private bool CheckRequirements()
+        private bool checkRequirements()
         {
             if (String.IsNullOrEmpty(cboFieldName.Text) || String.IsNullOrEmpty(cboTileIndex.Text) || String.IsNullOrEmpty(txbRasterWorkspace.Text))
             {
-                MessageBox.Show("Initialize Tool Settings", MB_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("initialize Tool Settings", MB_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Visible = true;
                 return false;
             }
@@ -187,7 +182,7 @@ namespace RasterTileLoader
             return false;
         }
 
-        private void GenerateRasterList()
+        private void generateRasterList()
         {
             // Clear the Raster List
             rasterList.Clear();
@@ -241,7 +236,7 @@ namespace RasterTileLoader
             
         }
 
-        private void ValidateRasterList()
+        private void validateRasterList()
         {
             IDictionary<String, Boolean> newList = new Dictionary<String, Boolean>();
 
@@ -257,7 +252,7 @@ namespace RasterTileLoader
             rasterList = newList;
         }
 
-        private void LoadRasterList()
+        private void loadRasterList()
         {
             bool itWorked = false;
             foreach (KeyValuePair<String, Boolean> raster in rasterList)
@@ -265,15 +260,24 @@ namespace RasterTileLoader
                 if (raster.Value == true)
                 {
                     if (!itWorked)
-                        saveFileTypeList(cboExtension.Text);
+                        saveFileTypeList(getExtension());
                     itWorked = true;
 
                     string filePath = txbRasterWorkspace.Text + "\\" + addPrefixAndSuffixToFileName(raster.Key) + getExtension();
-                    IRasterLayer rasterLayer = new RasterLayer();
-                    rasterLayer.CreateFromFilePath(filePath);
-                    _mxdocument.AddLayer(rasterLayer);
+                    try
+                    {
+                        IRasterLayer rasterLayer = new RasterLayer();
+                        rasterLayer.CreateFromFilePath(filePath);
+                        _mxdocument.AddLayer(rasterLayer);
+                    }
+                    catch (Exception ex)
+                    {
+                        // Just So ArcMap doesn't crash ;) 
+                    }
+                    
                 }
             }
+            rasterList.Clear();
         }
 
         private string getExtension()
@@ -350,14 +354,6 @@ namespace RasterTileLoader
             }
         }
         #endregion
-
-        #region Extension
-
-        
-
-        #endregion
-
-
     }
 }
 

@@ -33,7 +33,7 @@ namespace RasterTileLoader
 
         /// <summary>
         /// <para> FocusMap property </para>
-        /// <para> Initialize this class with a Map object to use the majority of its methods </para>
+        /// <para> initialize this class with a Map object to use the majority of its methods </para>
         /// </summary>
         private IMap FocusMap
         {
