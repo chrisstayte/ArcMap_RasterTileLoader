@@ -86,7 +86,6 @@
             // 
             this.txbRasterWorkspace.Location = new System.Drawing.Point(12, 183);
             this.txbRasterWorkspace.Name = "txbRasterWorkspace";
-            this.txbRasterWorkspace.ReadOnly = true;
             this.txbRasterWorkspace.Size = new System.Drawing.Size(282, 22);
             this.txbRasterWorkspace.TabIndex = 5;
             // 
