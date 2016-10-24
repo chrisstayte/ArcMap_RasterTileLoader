@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using System.Linq;
+using Ookii.Dialogs;
 
 namespace RasterTileLoader
 {
@@ -91,15 +92,25 @@ namespace RasterTileLoader
         private void btnSelectWorkspace_Click(object sender, EventArgs e)
         {
             string previousFolderDst = this.txbRasterWorkspace.Text;
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            //FolderBrowserDialog fbd = new FolderBrowserDialog();
+            //if (Directory.Exists(previousFolderDst))
+            //    fbd.SelectedPath = previousFolderDst;
+            //DialogResult result = new DialogResult();
+
+            //result = fbd.ShowDialog();
+
+            //if (result == DialogResult.OK)
+            //     this.txbRasterWorkspace.Text = fbd.SelectedPath;
+
+            var folderBrowserDialog = new VistaFolderBrowserDialog();
+
             if (Directory.Exists(previousFolderDst))
-                fbd.SelectedPath = previousFolderDst;
-            DialogResult result = new DialogResult();
+                folderBrowserDialog.SelectedPath = previousFolderDst;
 
-            result = fbd.ShowDialog();
-
-            if (result == DialogResult.OK)
-                 this.txbRasterWorkspace.Text = fbd.SelectedPath;
+            if (!VistaFolderBrowserDialog.IsVistaFolderDialogSupported)
+                MessageBox.Show(this, "Because you are not using Windows Vista or later, the regular folder browser dialog will be used. Please use Windows Vista to see the new dialog.", "Sample folder browser dialog");
+            if (folderBrowserDialog.ShowDialog(this) == DialogResult.OK)
+                this.txbRasterWorkspace.Text = folderBrowserDialog.SelectedPath;
         }
 
         private void cboExtension_KeyPress(object sender, KeyPressEventArgs e)
