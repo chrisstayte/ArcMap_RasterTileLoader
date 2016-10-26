@@ -23,4 +23,5 @@ C:\Users\Stayte\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\Ras
 C:\Users\Stayte\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.csproj.GenerateResource.Cache
 C:\Users\Stayte\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.dll
 C:\Users\Stayte\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.pdb
+C:\Users\Stayte\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.csprojResolveAssemblyReference.cache
 C:\Users\Stayte\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.esriAddIn

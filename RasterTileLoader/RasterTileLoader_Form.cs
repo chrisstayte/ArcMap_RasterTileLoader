@@ -289,6 +289,11 @@ namespace RasterTileLoader
                     
                 }
             }
+            if (itWorked)
+            {
+                _mxdocument.ActivatedView.Refresh();
+            }
+
             rasterList.Clear();
         }
 
