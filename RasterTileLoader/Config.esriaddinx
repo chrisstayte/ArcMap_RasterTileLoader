@@ -2,7 +2,7 @@
   <Name>RasterTileLoader</Name>
   <AddInID>{28b91f29-991b-4c15-af27-fb0772ad58c8}</AddInID>
   <Description>Adds Rasters To Table of Contents based on Tile Index</Description>
-  <Version>1.2</Version>
+  <Version>1.3</Version>
   <Image>Images\RasterTileLoader_1.png</Image>
   <Author>Chris Stayte</Author>
   <Company>Woolpert Inc.</Company>

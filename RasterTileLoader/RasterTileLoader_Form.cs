@@ -134,6 +134,8 @@ namespace RasterTileLoader
 
             loadFileTypeList();
 
+            cboTileIndex.Items.Clear();
+
             cboTileIndex.Items.AddRange(_utilities.PolygonLayers().ToArray());
             if (cboTileIndex.Items.Count > 0)
             {

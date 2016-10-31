@@ -56,7 +56,7 @@
             this.cboTileIndex.Location = new System.Drawing.Point(12, 68);
             this.cboTileIndex.Name = "cboTileIndex";
             this.cboTileIndex.Size = new System.Drawing.Size(150, 21);
-            this.cboTileIndex.TabIndex = 0;
+            this.cboTileIndex.TabIndex = 1;
             this.cboTileIndex.SelectedIndexChanged += new System.EventHandler(this.cboTileIndex_SelectedIndexChanged);
             // 
             // cboFieldName
@@ -66,7 +66,7 @@
             this.cboFieldName.Location = new System.Drawing.Point(176, 68);
             this.cboFieldName.Name = "cboFieldName";
             this.cboFieldName.Size = new System.Drawing.Size(148, 21);
-            this.cboFieldName.TabIndex = 1;
+            this.cboFieldName.TabIndex = 2;
             // 
             // txbPrefix
             // 
@@ -88,7 +88,7 @@
             this.txbRasterWorkspace.Name = "txbRasterWorkspace";
             this.txbRasterWorkspace.ReadOnly = true;
             this.txbRasterWorkspace.Size = new System.Drawing.Size(282, 22);
-            this.txbRasterWorkspace.TabIndex = 5;
+            this.txbRasterWorkspace.TabIndex = 6;
             // 
             // btnInit
             // 
@@ -96,7 +96,7 @@
             this.btnInit.Location = new System.Drawing.Point(12, 12);
             this.btnInit.Name = "btnInit";
             this.btnInit.Size = new System.Drawing.Size(75, 23);
-            this.btnInit.TabIndex = 6;
+            this.btnInit.TabIndex = 0;
             this.btnInit.Text = "Initialize";
             this.btnInit.UseVisualStyleBackColor = true;
             this.btnInit.Click += new System.EventHandler(this.btnInit_Click);
@@ -107,7 +107,7 @@
             this.btnLoadRaster.Location = new System.Drawing.Point(249, 230);
             this.btnLoadRaster.Name = "btnLoadRaster";
             this.btnLoadRaster.Size = new System.Drawing.Size(75, 23);
-            this.btnLoadRaster.TabIndex = 7;
+            this.btnLoadRaster.TabIndex = 10;
             this.btnLoadRaster.Text = "LoadRaster";
             this.btnLoadRaster.UseVisualStyleBackColor = true;
             this.btnLoadRaster.Click += new System.EventHandler(this.btnLoadRaster_Click);
@@ -119,7 +119,7 @@
             this.rbtnAll.Location = new System.Drawing.Point(12, 236);
             this.rbtnAll.Name = "rbtnAll";
             this.rbtnAll.Size = new System.Drawing.Size(38, 17);
-            this.rbtnAll.TabIndex = 9;
+            this.rbtnAll.TabIndex = 8;
             this.rbtnAll.TabStop = true;
             this.rbtnAll.Text = "All";
             this.rbtnAll.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             this.rbtnSelected.Location = new System.Drawing.Point(70, 236);
             this.rbtnSelected.Name = "rbtnSelected";
             this.rbtnSelected.Size = new System.Drawing.Size(68, 17);
-            this.rbtnSelected.TabIndex = 10;
+            this.rbtnSelected.TabIndex = 9;
             this.rbtnSelected.TabStop = true;
             this.rbtnSelected.Text = "Selected";
             this.rbtnSelected.UseVisualStyleBackColor = true;
@@ -212,7 +212,7 @@
             this.btnSelectWorkspace.Location = new System.Drawing.Point(300, 181);
             this.btnSelectWorkspace.Name = "btnSelectWorkspace";
             this.btnSelectWorkspace.Size = new System.Drawing.Size(24, 24);
-            this.btnSelectWorkspace.TabIndex = 18;
+            this.btnSelectWorkspace.TabIndex = 7;
             this.btnSelectWorkspace.UseVisualStyleBackColor = true;
             this.btnSelectWorkspace.Click += new System.EventHandler(this.btnSelectWorkspace_Click);
             // 
@@ -222,7 +222,7 @@
             this.cboExtension.Location = new System.Drawing.Point(225, 128);
             this.cboExtension.Name = "cboExtension";
             this.cboExtension.Size = new System.Drawing.Size(99, 21);
-            this.cboExtension.TabIndex = 19;
+            this.cboExtension.TabIndex = 5;
             this.cboExtension.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboExtension_KeyPress);
             // 
             // btnClose
@@ -231,7 +231,7 @@
             this.btnClose.Location = new System.Drawing.Point(249, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 20;
+            this.btnClose.TabIndex = 11;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
