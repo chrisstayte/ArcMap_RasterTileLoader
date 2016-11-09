@@ -81,8 +81,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Ookii.Dialogs">
-      <HintPath>DLL\Ookii.Dialogs.dll</HintPath>
+    <Reference Include="Ookii.Dialogs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c15020868fd6249, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Ookii.Dialogs.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -160,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\searches_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Ookii.Dialogs.dll" />
   </ItemGroup>
   <PropertyGroup>
     <ZipFileExtension>esriAddIn</ZipFileExtension>

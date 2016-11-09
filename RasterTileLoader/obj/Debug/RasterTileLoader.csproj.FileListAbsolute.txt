@@ -25,3 +25,13 @@ C:\Users\Stayte\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\Ras
 C:\Users\Stayte\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.pdb
 C:\Users\Stayte\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.csprojResolveAssemblyReference.cache
 C:\Users\Stayte\Documents\SourceControl\ArcObjects Toolbars\RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.esriAddIn
+C:\Users\Stayte\Documents\SourceControl\WoolpertGS\ArcObjects Tools\RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.dll
+C:\Users\Stayte\Documents\SourceControl\WoolpertGS\ArcObjects Tools\RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.pdb
+C:\Users\Stayte\Documents\SourceControl\WoolpertGS\ArcObjects Tools\RasterTileLoader\RasterTileLoader\bin\Debug\Ookii.Dialogs.dll
+C:\Users\Stayte\Documents\SourceControl\WoolpertGS\ArcObjects Tools\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.csprojResolveAssemblyReference.cache
+C:\Users\Stayte\Documents\SourceControl\WoolpertGS\ArcObjects Tools\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.Properties.Resources.resources
+C:\Users\Stayte\Documents\SourceControl\WoolpertGS\ArcObjects Tools\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.RasterTileLoader_Form.resources
+C:\Users\Stayte\Documents\SourceControl\WoolpertGS\ArcObjects Tools\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.csproj.GenerateResource.Cache
+C:\Users\Stayte\Documents\SourceControl\WoolpertGS\ArcObjects Tools\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.dll
+C:\Users\Stayte\Documents\SourceControl\WoolpertGS\ArcObjects Tools\RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.pdb
+C:\Users\Stayte\Documents\SourceControl\WoolpertGS\ArcObjects Tools\RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.esriAddIn
