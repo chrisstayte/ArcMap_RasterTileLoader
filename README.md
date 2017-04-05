@@ -1,4 +1,4 @@
-# ArcGIS Desktop Raster Tile Loader
+# ArcMapRaster Tile Loader
 
 ### Used to add raster file to ArcMap based upon a tile index.
 
