@@ -44,3 +44,13 @@ C:\SourceControl\GitHub\ArcGISDesktop_RasterTileLoader\RasterTileLoader\bin\Debu
 C:\SourceControl\GitHub\ArcGISDesktop_RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.pdb
 C:\SourceControl\GitHub\ArcGISDesktop_RasterTileLoader\RasterTileLoader\bin\Debug\Ookii.Dialogs.dll
 C:\SourceControl\GitHub\ArcGISDesktop_RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.esriAddIn
+C:\SourceControl\GitHub\ArcMap_RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.dll
+C:\SourceControl\GitHub\ArcMap_RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.pdb
+C:\SourceControl\GitHub\ArcMap_RasterTileLoader\RasterTileLoader\bin\Debug\Ookii.Dialogs.dll
+C:\SourceControl\GitHub\ArcMap_RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.csprojResolveAssemblyReference.cache
+C:\SourceControl\GitHub\ArcMap_RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.Properties.Resources.resources
+C:\SourceControl\GitHub\ArcMap_RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.RasterTileLoader_Form.resources
+C:\SourceControl\GitHub\ArcMap_RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.csproj.GenerateResource.Cache
+C:\SourceControl\GitHub\ArcMap_RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.dll
+C:\SourceControl\GitHub\ArcMap_RasterTileLoader\RasterTileLoader\obj\Debug\RasterTileLoader.pdb
+C:\SourceControl\GitHub\ArcMap_RasterTileLoader\RasterTileLoader\bin\Debug\RasterTileLoader.esriAddIn

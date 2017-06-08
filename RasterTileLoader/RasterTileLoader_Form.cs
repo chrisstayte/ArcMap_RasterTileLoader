@@ -285,7 +285,7 @@ namespace RasterTileLoader
                     }
                     catch (Exception ex)
                     {
-                        
+                        ex.ToString();
                         // Just So ArcMap doesn't crash ;) 
                     }
                     
